@@ -16,28 +16,29 @@
 
             <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
         {% endif %}
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <h2 class="post_title">{{ post.title }}</h2>
+        <p class="kiji">{{ post.text|linebreaksbr }}</p>
     </div>
 
     <hr>
-    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+    <div class="comment_btn1"><a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a></div>
+    <section class="post">
     {% for comment in post.comments.all %}
     {% if user.is_authenticated or comment.approved_comment %}
     <div class="comment">
         <div class="date">
             {{ comment.created_date }}
             {% if not comment.approved_comment %}
-                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+                <div class="comment_btn2"><a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a></div>
+                <div class="comment_btn2"><a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a></div>
             {% endif %}
         </div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
+        <div  class="comment_author"><strong>{{ comment.author }}</strong></div>
+        <div class="kiji"><p>{{ comment.text|linebreaks }}</p></div>
     </div>
     {% endif %}
 {% empty %}
-    <p>No comments here yet :(</p>
+    <p class="No">No comments here yet :(</p>
 {% endfor %}
-
+</section>
 {% endblock %}

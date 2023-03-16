@@ -1,3 +1,56 @@
+.btn
+{
+    position: relative;
+    top: 15px;
+    clear: both;
+}
+
+.draft
+{
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.draft_text
+{
+    margin-left: 20px;
+    background-color: cornsilk;
+    margin: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    position: relative;
+    bottom: 10px;
+    border-radius: 10px;
+}
+
+.comment_btn1
+{
+    position: relative;
+    bottom: 30px;
+    left: 20px;
+}
+
+.comment_btn2
+{
+    position: relative;
+    bottom: 10px;
+    right: -100px;
+    float: left;
+}
+
+.comment_author
+{
+    clear: both;
+    float: none;
+    background-color: cornsilk;
+    width: 100px;
+    position: relative;
+    bottom: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
 h1 a,h2 a{
     color: #c25100;
     font-family: 'Lobster';
@@ -13,6 +66,9 @@ h1 a,h2 a{
 body{
     
     background-color: cornsilk;
+    width: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 .page-header
@@ -171,9 +227,19 @@ ul
     margin-left: 20px;
     padding-left: 10px;
     border-radius: 20px;
+    position: relative;
+    bottom: 10px;
+    overflow: hidden;
+    clear: both;
 }
 
 .post_title
 {
     margin-left: 20px;
+}
+
+.No
+{
+    padding-left: 10px;
+    color: #ffffff;
 }
