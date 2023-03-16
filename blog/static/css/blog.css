@@ -4,7 +4,8 @@ h1 a,h2 a{
 }
 
 body{
-    padding-left: 15px;
+    
+    background-color: cornsilk;
 }
 
 .page-header
@@ -57,6 +58,9 @@ h1,h2,h3,h4
 .post
 {
     margin-bottom: 70px;
+    background-color: #c25100;
+    height: auto;
+    border-radius: 20px;
 }
 
 .post h2 a, .post h2 a:visited
@@ -67,4 +71,90 @@ h1,h2,h3,h4
 .comment
 {
     margin:20px 0px 20px 20px ;
+}
+
+.top_page
+{
+    float: right;
+}
+
+.list
+{
+    background-color: #c25100;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.list_list
+{
+    background-color: cornsilk;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+article
+{
+    color: #ffffff;
+    background-color: #c25100;
+    margin: 0;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.box
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+}
+
+.blog_list
+{
+    background-color: cornsilk;
+    color: #000000;
+    margin: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+footer
+{
+    background-color: #c25100;
+    color: #ffffff;
+}
+
+.Home
+{
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+ul
+{
+    list-style: none;
+}
+
+.date
+{
+    background-color: cornsilk;
+    margin: 5px;
+    margin-top: 10px;
+    height: 25px;
+    clear: both;
+    position: relative;
+    top: 10px;
+    padding-left: 10px;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.kiji
+{
+    background-color: cornsilk;
+    margin: 5px;
+    margin-left: 20px;
+    padding-left: 10px;
+    border-radius: 20px;
 }

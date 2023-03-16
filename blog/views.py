@@ -94,3 +94,6 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+def post_outline(request):
+    return render(request, 'blog/post_outline.html', {})

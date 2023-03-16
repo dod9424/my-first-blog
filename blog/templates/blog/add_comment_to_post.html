@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>New comment</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
+    <form method="POST" class="post-form">{% csrf_token %} <!--サイトを横断するリクエストを偽造する攻撃から守るシステムCross Site Request Forgery Block Token-->
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Send</button>
     </form>

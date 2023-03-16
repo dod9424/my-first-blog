@@ -1,13 +1,14 @@
 {% extends 'blog/base.html' %}<!--ベースを継承（テンプレートを利用）-->
 {% block content %}
+    <h2><a href="{% url 'post_outline' %}">Post Outline</a></h2>
     {% for post in posts %}
         <div class="post">
             <div class="date">
-                {{ post.published_date }}
+                {{ post.published_date }}<!--記事の公開時期-->
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
+            <p class="kiji">{{ post.text|linebreaksbr }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="kiji">Comments: {{ post.approved_comments.count }}</a>
         </div>
     {% endfor %}
 {% endblock %}

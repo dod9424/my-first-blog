@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<h1>Welcome to MyBlog !!</h1>
+
+<h2>ようこそ！</h2>
+
+<P>このブログについて説明します。</P>
+
+<ul class="list">
+    <li class="list_list"><a href="#作成経緯">作成経緯</a></li>
+    <li class="list_list"><a href="#開発環境">開発環境</a></li>
+    <li class="list_list"><a href="#作成感想">作成感想</a></li>
+    <li class="list_list"><a href="#まとめ">まとめ</a></li>
+</ul>
+
+<article>
+    <section class="box">
+        <h3 id="作成経緯" class="title_name">作成経緯について</h3>
+        <p class="blog_list">私は入社した際の新人研修としてホームページの作成をすることになりました。</p>
+    </section>
+    <section class="box">
+        <h3 id="開発環境" class="title_name">開発環境について</h3>
+        <p class="blog_list">私は今回HTML,CSS,Pythonを使用して開発に取り組みました。<br>
+        特にフレームワークであるDjangoはとても興味深く楽しみながら作成できました。</p>
+    </section>
+    <section class="box" class="title_name">
+        <h3 id="作成感想">作成感想について</h3>
+        <p class="blog_list">私はHTML,CSS,Pythonについて触ったことがあったので、ある程度はできるだろうと思っていました。<br>
+        しかし、Djangoの機能について思うようにいかず、四苦八苦しながら完成に至りました。<br>
+        それでもフレームワークの便利性を痛感し、使いこなせるようになりたいと思いました。<br>
+        今回の経験をしっかりと吸収して実践に上手く活かせるようにしたいです。</p>
+    </section>
+    <section class="box" class="title_name">
+        <h3 id="まとめ">まとめ</h3>
+        <p class="blog_list">まだまだ未熟であるため、常に成長を意識して取り組んでいきたい。<br>
+        今回バックエンド処理にpythonを使ったが新鮮で良い経験になりました。<br>
+        Djangogirlsで得た経験をしっかりと活かせるように頑張っていきます。</p>
+    </section>
+</article>
+
+{% endblock %}
