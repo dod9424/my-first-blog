@@ -6,7 +6,7 @@
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}"><!--blog.cssをdjango形式で読み込み-->
     </head>
-    <body>
+    <body class="all">
         <div class="page-header">
             {% if user.is_authenticated %}<!--ユーザーがログインしている時は新規作成とドラフトリストへのリンクアイコンの表示-->
         <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a><!--新規作成用のリンクを表示-->

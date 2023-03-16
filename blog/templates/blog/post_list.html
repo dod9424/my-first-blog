@@ -6,7 +6,7 @@
             <div class="date">
                 {{ post.published_date }}<!--記事の公開時期-->
             </div>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}" class="post_title">{{ post.title }}</a></h2>
             <p class="kiji">{{ post.text|linebreaksbr }}</p>
             <a href="{% url 'post_detail' pk=post.pk %}" class="kiji">Comments: {{ post.approved_comments.count }}</a>
         </div>
