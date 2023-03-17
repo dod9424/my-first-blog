@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}<!--ベースを継承（テンプレートを利用）-->
 {% block content %}
-    <h2><a href="{% url 'post_outline' %}">Post Outline</a></h2>
+    <h2><a href="{% url 'post_outline' %}" class="outline">Post Outline</a></h2>
     {% for post in posts %}
         <div class="post">
             <div class="date">
