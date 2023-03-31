@@ -7,8 +7,11 @@
                 {{ post.published_date }}<!--記事の公開時期-->
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}" class="post_title">{{ post.title }}</a></h2>
-            <p class="kiji">{{ post.text|linebreaksbr }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}" class="kiji">Comments: {{ post.approved_comments.count }}</a>
+            <section class="kiji_box">
+            <p class="kiji">{{ post.text|linebreaksbr }}<br></p>
+            <p class="written">written by dod9424</p>
+            </section>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="kiji_comments">Comments: {{ post.approved_comments.count }}</a>
         </div>
     {% endfor %}
 {% endblock %}

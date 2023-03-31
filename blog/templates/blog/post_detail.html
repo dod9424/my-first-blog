@@ -17,7 +17,10 @@
             <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
         {% endif %}
         <h2 class="post_title">{{ post.title }}</h2>
-        <p class="kiji">{{ post.text|linebreaksbr }}</p>
+        <section class="kiji_box">
+            <p class="kiji">{{ post.text|linebreaksbr }}</p>
+            <p class="written">written by dod9424</p>
+        </section>
     </div>
 
     <hr>
@@ -42,8 +45,8 @@
     </div>
     
     {% endif %}
-{% empty %}
-    <p class="No">No comments here yet :(</p>
-{% endfor %}
+    {% empty %}
+        <p class="No">No comments here yet :(</p>
+    {% endfor %}
 </section>
 {% endblock %}

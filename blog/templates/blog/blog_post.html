@@ -1,0 +1,11 @@
+<section class="blog_list_link">
+    <h1 class="bp">Blog Posts</h1>
+    <div  class="link">
+    <ul>
+    {% for post in posts %}
+        <li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></li>
+        <li><p>{{ post.published_date }}</p></li>
+    {% endfor %}
+    </ul>
+    </div>
+</section>

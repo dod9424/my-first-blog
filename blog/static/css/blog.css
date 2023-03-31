@@ -57,6 +57,10 @@ h1 a,h2 a{
     font-family: 'Lobster';
 }
 
+p{font-family: serif;}
+
+.wel{font-family: serif;}
+
 .all
 {
     width: 100%;
@@ -168,7 +172,7 @@ article
     color: #ffffff;
     background-color: #c25100;
     margin: 0;
-    height: 550px;
+    min-height: 750px;
     border-radius: 20px;
 }
 
@@ -177,6 +181,7 @@ article
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
+    font-family: serif;
 }
 
 .blog_list
@@ -188,6 +193,12 @@ article
     margin-left: 10px;
     border-radius: 10px;
     padding-left: 10px;
+    min-height: 100px;
+}
+
+.post_title
+{
+    font-family: serif;
 }
 
 .title_name
@@ -205,6 +216,7 @@ footer
 {
     color: #ffffff;
     padding-left: 20px;
+    font-family: serif;
 }
 
 ul
@@ -229,16 +241,48 @@ ul
 
 
 .kiji
+{ 
+    padding-top: 20px;
+    font-family: serif;
+}
+
+.kiji_box
 {
     background-color: cornsilk;
-    margin: 5px;
+    margin: 20px;
+    margin-top: 20px;
     margin-left: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 10px;
+    overflow: hidden;
+    clear: both;
+    min-height: 200px;
+}
+
+.kiji_comments
+{
+    background-color: cornsilk;
+    margin: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
     padding-left: 10px;
     border-radius: 20px;
     position: relative;
     bottom: 10px;
     overflow: hidden;
     clear: both;
+    min-height: 200px;
+    padding: 5px;
+    font-family: serif;
+}
+
+.written
+{
+    text-align: right;
+    padding-top: 120px;
+    padding-right: 20px;
 }
 
 .post_title
@@ -260,6 +304,8 @@ ul
     padding: 5px;
     border-radius: 10px;
     clear: both;
+    position: relative;
+    bottom: 10px;
 }
 
 .blog_list_link
@@ -271,6 +317,7 @@ ul
     padding-left: 10px;
     padding-bottom: 10px;
     border-radius: 20px;
+    margin-top: 50px;
 }
 
 .bp

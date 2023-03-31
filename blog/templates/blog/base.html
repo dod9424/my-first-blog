@@ -19,16 +19,8 @@
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
 
-        <section class="blog_list_link">
-            <h1 class="bp">Blog Posts</h1>
-            <div  class="link">
-            <ul>
-        {% for post in posts %}
-            <li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a><br><a href="{% url 'post_detail' post.id %}">{{ post.published_date }}</a></li>
-        {% endfor %}
-            </ul>
-            </div>
-        </section>
+        {% include "blog/blog_post.html" %}
+        
 
         <div class="content container">
             <div class="row">
