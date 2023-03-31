@@ -332,3 +332,12 @@ ul
     margin-left: 10px;
     padding-right: 20px;
 }
+
+.pages
+{
+    float: left;
+    background-color: #c25100;
+    padding: 5px;
+    margin: 5px;
+    color: #ffffff;
+}

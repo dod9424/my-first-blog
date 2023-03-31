@@ -10,7 +10,35 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
 
 
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
+
+def paginate_queryset(request, queryset, count):
+    """Pageオブジェクトを返す。
+
+    ページングしたい場合に利用してください。
+
+    countは、1ページに表示する件数です。
+    返却するPgaeオブジェクトは、以下のような感じで使えます。
+
+        {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}">Prev</a>
+        {% endif %}
+
+    また、page_obj.object_list で、count件数分の絞り込まれたquerysetが取得できます。
+
+    """
+    count = 3
+    paginator = Paginator(queryset, count)
+    page = request.GET.get('page')
+    try:
+        page_obj = paginator.page(page)
+    except PageNotAnInteger:
+        page_obj = paginator.page(1)
+    except EmptyPage:
+        page_obj = paginator.page(paginator.num_pages)
+    return page_obj
 
 '''def post_list(request):
     posts = Post.objects.order_by('-created_at')
@@ -23,7 +51,10 @@ from django.contrib.auth.views import LoginView
 #@login_required  
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'blog/post_list.html', {'posts':posts})
+    post_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    page_obj = paginate_queryset(request, post_list, 1)
+
+    return render(request, 'blog/post_list.html', {'post_list': page_obj.object_list,'page_obj': page_obj,'posts':posts})
 
 #@login_required    
 def post_detail(request, pk):
